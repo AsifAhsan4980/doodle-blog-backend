@@ -7,6 +7,10 @@ import errorHandler from "./middlewares/error.js";
 //routes import
 
 import blogRoutes from './routes/blogRoutes.js'
+import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import testApiRoutes from "./routes/testApiRoutes.js";
+import dummy from './routes/dummy.js'
 
 
 
@@ -36,5 +40,8 @@ app.use(errorHandler);
 //api
 app.use('/media/img/',express.static('media/img'));
 app.use('/blog', blogRoutes)
+app.use('/auth', authRoutes)
+app.use('/user', userRoutes)
+app.use('/test/fiserv/', testApiRoutes)
 
 export default app
