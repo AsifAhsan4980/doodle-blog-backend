@@ -11,6 +11,9 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import testApiRoutes from "./routes/testApiRoutes.js";
 import dummy from './routes/dummy.js'
+import recurring from "./routes/recurring.js";
+import card from "./routes/card.js";
+import url from "./routes/url.js";
 
 
 
@@ -43,5 +46,8 @@ app.use('/blog', blogRoutes)
 app.use('/auth', authRoutes)
 app.use('/user', userRoutes)
 app.use('/test/fiserv/', testApiRoutes)
+app.use('/test/fiserv/recurring/', recurring)
+app.use('/test/fiserv/card/', card)
+app.use('/test/fiserv/url/', url)
 
 export default app

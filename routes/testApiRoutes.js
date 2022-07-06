@@ -12,8 +12,6 @@ router.route('/3ds/:id')
     .post(All.TreeDS)
 router.route('/:TransactionId')
     .get(All.getData)
-router.route('/recurring/')
-    .post(All.recurringPost)
 router.route('/data/')
     .post(All.recurringPost)
 

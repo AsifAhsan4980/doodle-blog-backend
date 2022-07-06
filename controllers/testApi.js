@@ -15,8 +15,7 @@ const array = []
 
 const encryption = (data, id) => {
     const requestBody = JSON.stringify(data);
-
-    let rawSignature = key + id + time + requestBody
+    let rawSignature = key + id + time
     // if (data) {
     //     rawSignature = key + id + time + requestBody
     // }
@@ -303,10 +302,7 @@ const recurringPost = async (req, res, next) => {
             // Something happened in setting up the request that triggered an Error
             console.log('Error', error.message);
         }
-
     });
-
-
 }
 
 
